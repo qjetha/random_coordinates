@@ -15,8 +15,8 @@ def main():
 
 
 	#-----Output CSV With Random Coordinates-----#
-	if os.path.exists('{user}/_Resources/Dot Density/output/pakistan_admin2.csv'):
-		os.remove('{user}/_Resources/Dot Density/output/pakistan_admin2.csv')
+	if os.path.exists(f'{user}/_Resources/Dot Density/output/pakistan_admin2.csv'):
+		os.remove(f'{user}/_Resources/Dot Density/output/pakistan_admin2.csv')
 
 	with open(f'{user}/_Resources/Dot Density/output/pakistan_admin2.csv', 'w') as file:
 		
@@ -32,7 +32,6 @@ def main():
 			for p in points:
 				writer.writerow([geodata.iloc[unit].DIST_NAME, geodata.iloc[unit].DIST_ID, index_id, p.y, p.x])
 				index_id += 1
-
 
 
 
